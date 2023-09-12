@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { Multiselect } from "multiselect-react-dropdown";
 import { revalidatePath } from "next/cache";
 import Link from "next/link";
-import AddProduct from "./newProduct/page";
 
 
 export default function Home() {
@@ -90,11 +89,6 @@ export default function Home() {
       console.log(error);
     }
   }
-  // const [options, setOptions] = useState([
-  //   { key: "option1", value: "Option 1" },
-  //   { key: "option2", value: "Option 2" },
-  //   { key: "option3", value: "Option 3" },
-  // ]);
 
   async function handleAddOption(e) {
     //files that affect this function - /api/addOpt , @/app/models/option (database)
@@ -213,7 +207,7 @@ export default function Home() {
         <button className="p-3 bg-green-700 text-black font-bold" type="submit">
           Submit
         </button>
-        <Link href={"/newproduct"}>
+        <Link href={"/newProduct"}>
         <label className="p-4 font-black">Enter New menu item</label>
         </Link>
         <Link href={"/menuDisplay"}>
@@ -223,7 +217,6 @@ export default function Home() {
         <label className="p-4 font-black">view combos</label>
         </Link>
       </form>
-      {/* <AddProduct/> */}
     </main>
   );
 }
